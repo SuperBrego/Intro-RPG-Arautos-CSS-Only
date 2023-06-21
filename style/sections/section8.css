@@ -1,0 +1,78 @@
+#SCTN-08 details {
+    padding: 1vh 0;
+}
+#SCTN-08 details summary {
+    font-size: 1.2vw;
+    font-weight: bold;
+    list-style-type: '• ';
+    border-bottom: 1px solid white;  
+}
+
+/* **************************** */
+/* Para música */
+/* **************************** */
+#music_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    column-gap: 5%;
+    justify-content: center;
+}
+#music_gallery span::before { content: '• '; }
+#music_gallery a { color: red; }
+#music_gallery a:visited { color: inherit; }
+
+#music_section summary:after { 
+    content: ' (Clique para abrir)';
+    font-size: 0.7vw;
+}
+#music_section[open] summary:after { content: '';}
+
+/* **************************** */
+/* Para imagens */
+/* **************************** */
+#images_section details { padding: 4%; }
+
+/* #images_section[open] summary:after, */
+#images_section details[open] summary:after { content: ''; }
+
+/* #images_section summary:after, */
+#images_section details summary:after { 
+    content: ' (Clique para abrir)';
+    font-size: 0.7vw;
+}
+#images_section details[open] summary:after { content: '';}
+
+
+#mood_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    column-gap: 3%;
+    align-content: center;
+}
+
+.mood_gallery__item {
+    display: grid;
+}
+.mood_gallery__item img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: all 500ms;
+}
+.mood_gallery__item img:hover {
+    opacity: 1;
+    transform: scale(2.8);
+    z-index: 1;
+    object-fit: contain;
+}
+.mood_gallery__item:nth-child(1) img:hover,
+.mood_gallery__item:nth-child(3n+4) img:hover {
+    margin-left: 50%;
+}
+
+.mood_gallery__item:nth-child(1) img:hover,
+.mood_gallery__item:nth-child(3n) img:hover {
+    margin-left: -50%;
+}

@@ -1,0 +1,26 @@
+#SCTN-04 h2 {
+    border-bottom: 1px solid white;
+}
+
+#inspiration_table {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    column-gap: 1%;
+    align-content: center;
+}
+#inspiration_table span {
+    display: grid;
+    align-items: center;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 0.7vw;
+    padding: 1vh 0;
+    align-items: center;
+}
+
+.inspiration_item:nth-child(even) img {
+    float: right;
+}
+.inspiration_item:nth-child(odd) img {
+    float: left;
+}

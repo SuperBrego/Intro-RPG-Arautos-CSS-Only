@@ -1,0 +1,31 @@
+/* Os Labels */
+.SP__item {
+    display: grid;
+    align-content: space-evenly;
+    height: 5vh;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: min(80%, 1.8vw);
+    padding: 5%;
+    border: 1px solid red;
+    transition: 1s;
+    filter: saturate(0);
+}
+.SP__item:hover {
+    transition: 1s;
+    filter: saturate(0.5);    
+}
+
+/* Pintando os Labels */
+#intro_show-01:checked ~ aside label[for*="01"], 
+#intro_show-02:checked ~ aside label[for*="02"], 
+#intro_show-03:checked ~ aside label[for*="03"], 
+#intro_show-04:checked ~ aside label[for*="04"], 
+#intro_show-05:checked ~ aside label[for*="05"], 
+#intro_show-06:checked ~ aside label[for*="06"], 
+#intro_show-07:checked ~ aside label[for*="07"] {
+   filter: saturate(1);
+   font-weight: bold;
+   text-decoration: underline;
+}

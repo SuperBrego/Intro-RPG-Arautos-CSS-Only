@@ -1,0 +1,51 @@
+/* 
+Leitura do abaixo:
+    #intro_show-01:checked 
+    ↑ é o input marcado.
+
+    ~ 
+    ↑ vou para o elemento "pai".
+
+    #intro_body #SCTN
+    ↑ Vou no elemento artigo e daí dou informações para as seções.
+**/
+
+#harbinger_intro input { display: none; }
+#harbinger_intro #intro_body { overflow: hidden; }
+
+/* Pintando os Labels está na side_bar.css */
+
+#intro_show-01:checked ~ #intro_body #SCTN-01,
+#intro_show-02:checked ~ #intro_body #SCTN-02, 
+#intro_show-03:checked ~ #intro_body #SCTN-03, 
+#intro_show-04:checked ~ #intro_body #SCTN-04, 
+#intro_show-05:checked ~ #intro_body #SCTN-05, 
+#intro_show-06:checked ~ #intro_body #SCTN-06, 
+#intro_show-07:checked ~ #intro_body #SCTN-07,
+#intro_show-08:checked ~ #intro_body #SCTN-08 { 
+    /* animation: animateTst 1s forwards;  */
+    /* animation-direction: alternate; */
+    display: block;
+    margin-top: 0;
+}
+
+
+/* Itens para apresentar */
+#SCTN-01, #SCTN-02, #SCTN-03, 
+#SCTN-04, #SCTN-05, #SCTN-06, 
+#SCTN-07, #SCTN-08 {
+    display: none;
+    margin-top: -1000px;
+    /* animation-direction: alternate; */
+}
+
+@keyframes animateTst {
+    from {
+        display: none;
+        margin-top: -1000px;
+    }
+    to {
+        display: block;
+        margin-top: 0;
+    }
+}

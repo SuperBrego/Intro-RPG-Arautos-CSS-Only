@@ -1,0 +1,61 @@
+/* **************** */
+/* FAKE TAILWIND */
+/* **************** */
+.items_center { align-items: center; }
+
+.flex_column { display: flex; }
+.text-center { text-align: center; }
+
+.grid_column { display: grid; grid-auto-flow: column;}
+
+.gridC_span3 { grid-column: span 3; }
+
+.strike_txt { text-decoration: line-through; }
+
+/* Ajustando Details */
+#harbinger_intro details summary { 
+    cursor: pointer;
+}
+
+#harbinger_intro details summary > * {
+    display: inline;
+}
+
+/* Animações descartadas */
+/* #harbinger_intro::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('media/main_bg.png');
+    background-attachment: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    -webkit-animation: spinX 40s infinite;
+    animation: spinX 40s infinite;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 25%;
+    top: 25%;
+    text-align: center;
+}
+
+@-webkit-keyframes spinX {
+    0%   {
+        -webkit-transform: rotate(-360deg); 
+        -webkit-transform-origin: 0% 50% 0;
+    }
+    100% {
+        -webkit-transform: rotate(36-360deg); 
+        -webkit-transform-origin: 0% 50% 0;
+    }  
+}
+@keyframes spinX {  
+    0% {
+        transform: rotate(0deg); 
+        transform-origin: 0% 50% 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 0% 50% 0;
+    }
+} */

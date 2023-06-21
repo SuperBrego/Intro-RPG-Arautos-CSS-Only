@@ -1,0 +1,29 @@
+#SCTN-03 a { color: red; }
+#SCTN-03 a:visited { color: inherit; }
+
+.triggers-warning { 
+    margin: 1vh 0;
+}
+.triggers-warning summary {
+    font-size: 1.2vw;
+    font-weight: bold;
+    list-style-type: '• ';
+    border-bottom: 1px solid white;    
+}
+
+/* #images_section summary:after, */
+.triggers-warning summary:after { 
+    content: ' (Clique para abrir)';
+    font-size: 0.7vw;
+}
+.triggers-warning[open] summary:after { content: '';}
+
+details[open] summary ~ * {
+    animation: sweep .5s;
+    /* animation-iteration-count: infinite; */
+}
+  
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+}

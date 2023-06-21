@@ -1,0 +1,156 @@
+@import 'style/side_bar.css';
+@import 'style/functions.css';
+@import 'style/fonts.css';
+@import 'style/utilities.css';
+/* Seções */
+@import 'style/sections/section1.css';
+@import 'style/sections/section2.css';
+@import 'style/sections/section3.css';
+@import 'style/sections/section4.css';
+@import 'style/sections/section5.css';
+@import 'style/sections/section8.css';
+
+html {
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #FFF2;
+}
+*::-webkit-scrollbar-thumb {
+   background: #FFF6 !important;
+   cursor: pointer;
+}
+
+body { 
+    background-color: #050505;
+    opacity: 1;
+    background-image: radial-gradient(circle at center center, #535353, #050505), repeating-radial-gradient(circle at center center, #535353, #535353, 23px, transparent 46px, transparent 23px);
+    background-blend-mode: multiply;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#page_intro {
+    /* height: 90vh; */
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* ******************* */
+/* Texto de introdução */
+/* ******************* */
+#plot_text {
+    padding: 5% 5% 0 5%;
+    color: white;
+    font-size: 68%;
+    height: 90vh;
+}
+#plot_text #harbinger-subtitle_drop { font-size: 150%; }
+#plot_text #harbinger-title_drop { font-size: 400%; }
+
+/* ************************************* */
+/* Tabela com conteúdo sobre a campanha. */
+/* ************************************* */
+#harbinger_intro {
+    justify-self: center;
+    height: 600px;
+    width: 80vw;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+    /* display: flex; */
+    display: none;
+    animation: fade_in 2s forwards;
+}
+
+/* Animação de Entrada */
+@-webkit-keyframes fade_in {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}
+@keyframes fade_in {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+
+/* Artigo Principal */
+#intro_body {
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+    width: 100%;
+}
+
+.post_sections {
+    width: 80%;
+    height: 80%;
+    padding: 5%;
+    color: white;
+    font-size: 70%;
+    align-self: center;
+    border: 2px solid #111;
+    overflow-y: auto;
+}
+
+/* ******************************* */
+/* Tabelinhas */
+/* ******************************* */
+.harbinger__info_table {
+    display: grid;
+    color: black;
+}
+.harbinger__info_table header {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.harbinger__info_table div:nth-child(even) { background-color: dimgray; }
+.harbinger__info_table div:nth-child(odd) { background-color: lightgray; }
+
+/* Item das tabelas */
+/* ******************************* */
+.harbinger__info_table header, .info_table__item {
+    padding: 0 0.5vw;
+    display: grid;
+    width: 100%;
+}
+.info_table__item span:first-of-type { font-weight: bold; }
+
+#harbinger__origin_table header, #harbinger__origin_table .info_table__item {
+    grid-template-columns: 40% 60%;
+}
+
+#harbinger__clade_table header, #harbinger__clade_table .info_table__item {
+    grid-template-columns: 20% 80%;
+}
+
+/* Alteração de Página */
+#switch_bt {
+    font-size: 200%;
+    font-family: slammer-tag;
+    color: white;
+    background-color: black;
+    border: 2px solid #535353;
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 5%;
+}
+#switch_bt:hover, #switch_bt label:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+}
+
+#switch_screen { display: none; }
+#switch_screen:checked ~ #switch_bt { display: none; }
+#switch_screen:checked ~ #plot_text { display: none; }
+#switch_screen:checked ~ #harbinger_intro { display: flex; }

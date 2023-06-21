@@ -1,0 +1,41 @@
+.violence__header_item {
+    border: 1px solid white;
+    padding: 1% 2%;
+    background-image: linear-gradient(red, blue);
+}
+
+/* Conteúdo oculto */
+#violence__16, #violence__18 { display: none; }
+#violence__16 p, #violence__18 p { animation: fade_in 2s; }
+
+/* Exibir quando marcado */
+#tab_16:checked ~ #violence__content #violence__16 { display: block; }
+#tab_18:checked ~ #violence__content #violence__18 { display: block; }
+
+#tab_16:not(:checked) ~ header #lbl_16,
+#tab_18:not(:checked) ~ header #lbl_18 {
+    color: white;
+    font-style: italic;
+    filter: saturate(0);
+}
+
+#tab_16:checked ~ header #lbl_16,
+#tab_18:checked ~ header #lbl_18 {
+    filter: saturate(1);
+}
+
+/*  */
+#violence__content section {
+    padding: 1%;
+    border: 1px solid white;
+    font-style: italic;
+}
+
+@-webkit-keyframes fade_in {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}
+@keyframes fade_in {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}

@@ -1,0 +1,51 @@
+/* Seção 1 */
+/* #SCTN-01 {
+    font-size: clamp(1.0vw, 1.5vw, 100%);
+} */
+
+#harbinger-title_drop {
+    font-family: slammer-tag;
+    font-size: 700%;
+    text-align: center;
+}
+#harbinger-subtitle_drop {
+    color: red;
+    background-color: black;
+    padding: 0 0.5vw;
+    height: fit-content;
+    font-weight: bold;
+}
+
+/* Seção 1 - "Arautos trazem..." texto */
+.text_switch-section1 {
+    display: inline;
+}
+.text_switch-section1::after {
+    -webkit-animation: text_switch 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: text_switch 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both; 
+    animation-iteration-count: infinite;
+    content: 'Destruição';
+}
+
+@-webkit-keyframes text_switch {
+    0% { content: 'Destruição'; }
+    10% { content: 'Equilíbrio'; }
+    20% { content: 'Violência'; }
+    30% { content: 'Salvação'; }
+    40% { content: 'Mudança'; }
+    60% { content: 'Morte'; }
+    70% { content: 'Equilíbrio'; }
+    80% { content: 'Extinção'; }
+    90% { content: 'Paz'; }
+}
+@keyframes text_switch {
+    0% { content: 'Destruição'; }
+    10% { content: 'Equilíbrio'; }
+    20% { content: 'Violência'; }
+    30% { content: 'Salvação'; }
+    40% { content: 'Mudança'; }
+    60% { content: 'Morte'; }
+    70% { content: 'Equilíbrio'; }
+    80% { content: 'Extinção'; }
+    90% { content: 'Paz'; }
+}
